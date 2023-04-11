@@ -1,0 +1,112 @@
+.clock {
+  margin: 2em;
+  padding: 2em;
+  width: 20em;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  border-radius: 1em;
+  box-shadow: -10px 0px 2em rgb(0 0 0 / 0.3);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  place-content: center;
+}
+
+.clockFace {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 6.5em;
+  height: 13em;
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  background-color: rgb(194, 196, 205);
+  background-image: url(../../../public/watch.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 30px rgb(0 0 0 / 0.7);
+  border: 5px solid black;
+  border-right: transparent;
+  position: relative;
+  transform: translateX(-3.25em);
+}
+.clockFace::after {
+  content: '';
+  width: 0.8em;
+  height: 0.8em;
+  background-color: rgb(222 0 0 / 1);
+  position: absolute;
+  border-radius: 50%;
+  transform: translateX(0.2em);
+}
+
+.arrowsGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-0.2em);
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.hh {
+  width: 6em;
+  height: 6em;
+}
+
+.mm {
+  width: 8em;
+  height: 8em;
+}
+
+.ss {
+  width: 10em;
+  height: 10em;
+}
+
+.hh::after,
+.mm::after,
+.ss::after {
+  content: '';
+  background-color: #000;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 0.7);
+}
+.hh::after {
+  width: 0.3em;
+  height: 3em;
+}
+.mm::after {
+  width: 0.2em;
+  height: 4em;
+}
+.ss::after {
+  width: 0.1em;
+  height: 6.5em;
+  background-color: rgb(222 0 0 / 1);
+}
+
+.list {
+  width: 100%;
+  display: grid;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+}
+
+.item {
+  list-style: none;
+}

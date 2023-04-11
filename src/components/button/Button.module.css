@@ -1,0 +1,41 @@
+
+.button {
+  justify-self: center;
+  border-radius: 0.75em;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: inherit;
+  text-transform: uppercase;
+  background-color: var(--color-light);
+  cursor: pointer;
+  transition: border-color 250ms;
+}
+.button:hover {
+  border-color: var(--color-blue);
+}
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto var(--color-blue);
+}
+
+.button:active {
+  scale: 0.98;
+  transition: scale 100ms;
+}
+
+.button.secondary {
+  background-color: var(--color-yellow);
+  color: var(--color-dark)
+}
+.button.primary {
+  background-color: var(--color-blue);
+  color: var(--color-light)
+}
+@media (prefers-color-scheme: dark) {
+  .button {
+    background-color: var(--color-dark);
+    color: var(--color-light)
+  }
+}
